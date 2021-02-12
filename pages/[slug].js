@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 
 export async function getServerSideProps() {
@@ -14,23 +13,16 @@ export async function getServerSideProps() {
 
 export default function Home(props) {
   console.log('Props data', props);
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push(`/Kaal`);
-  };
-
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App {props.data.title}</title>
+        <title>Create Next App Kaalaththy</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title} onClick={handleClick}>
-          Welcome to{' '}
-          <a href='https://nextjs.org'>Next.js! {props.data.title}</a>
+        <h1 className={styles.title}>
+          Welcome to <a href='https://nextjs.org'>Next.js! Kaalaththy</a>
         </h1>
 
         <p className={styles.description}>
